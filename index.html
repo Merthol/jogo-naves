@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Resgate</title>
 </head>
 
@@ -15,7 +16,7 @@
         <div id="fundoGame">
             <!-- div fundoGame !-->
 
-            <div id="inicio">
+            <div id="inicio" onclick="start()">
                 <!-- div inicio !-->
                 <h1>Resgate</h1>
                 <p>Utilize a tecla W para movimentar o helicóptero para cima, a tecla S para movimentar o helicóptero
@@ -24,8 +25,21 @@
                 <p>Clique aqui para iniciar!!</p>
 
             </div> <!-- fim da div inicio !-->
+
         </div> <!-- fim da div fundoGame !-->
+
     </div> <!-- fim da div container !-->
+
+    <audio src="assets/sons/som.mp3" preload="auto" id="somDisparo"></audio>
+    <audio src="assets/sons/explosao.mp3" preload="auto" id="somExplosao"></audio>
+    <audio src="assets/sons/musica_fundo.mp3" preload="auto" id="musica"></audio>
+    <audio src="assets/sons/gameover.mp3" preload="auto" id="somGameover"></audio>
+    <audio src="assets/sons/perdido.mp3" preload="auto" id="somPerdido"></audio>
+    <audio src="assets/sons/resgate.mp3" preload="auto" id="somResgate"></audio>
+
+    <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-collision.min.js"></script>
 </body>
 
 </html>

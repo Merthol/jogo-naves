@@ -1,0 +1,262 @@
+@font-face {
+    font-family: Titulo;
+    src: url(../fontes/ANODETONOONE.TTF);
+}
+
+h1 {
+    font-family: Titulo;
+    font-size: 40px;
+    color: #603A03;
+}
+
+h2 {
+    font-family: Titulo;
+    font-size: 15px;
+    color: #FFF;
+}
+
+body {
+    background-image: url(../imgs/fundo.jpg);
+}
+
+h3 {
+    font-family: Titulo;
+    font-size: 20px;
+    color: #603A03;
+}
+
+#container {
+    width: 950px;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#fundoGame {
+    width: 950px;
+    height: 630px;
+    background-image: url(../imgs/fundo_game.jpg);
+    border-color: #FFF;
+    border-style: solid;
+}
+
+#jogador {
+    width: 256px;
+    height: 66px;
+    position: absolute;
+    left: 8px;
+    top: 179px;
+    background-image: url(../imgs/apache.png);
+
+}
+
+#inimigo1 {
+    width: 256px;
+    height: 66px;
+    position: absolute;
+    left: 689px;
+    top: 253px;
+    background-image: url(../imgs/inimigo1.png);
+
+}
+
+#inimigo2 {
+    width: 165px;
+    height: 70px;
+    position: absolute;
+    left: 775px;
+    top: 447px;
+    background-image: url(../imgs/inimigo2.png);
+}
+
+#amigo {
+    width: 44px;
+    height: 51px;
+    position: absolute;
+    left: 10px;
+    top: 464px;
+    background-image: url(../imgs/amigo.png);
+}
+
+#disparo {
+    width: 50px;
+    height: 8px;
+    position: absolute;
+    background-image: url(../imgs/disparo.png);
+}
+
+#explosaoInimigo1 {
+    background-image: url(../imgs/explosao.png);
+    width: 15px;
+    height: 87px;
+    position: absolute;
+}
+
+#explosaoInimigo2 {
+    background-image: url(../imgs/explosao.png);
+    width: 15px;
+    height: 87px;
+    position: absolute;
+}
+
+#morteAmigo {
+    width: 44px;
+    height: 51px;
+    position: absolute;
+}
+
+#inicio {
+    width: 350px;
+    height: 200px;
+    background-color: #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#placar {
+    width: 450px;
+    height: 50px;
+    position: absolute;
+    left: 5px;
+    top: 590px;
+}
+
+#energia {
+    width: 140px;
+    height: 38px;
+    position: absolute;
+    left: 750px;
+    top: 7px;
+}
+
+#fim {
+    width: 350px;
+    height: 200px;
+    background-color: #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Animação do jogador */
+.animaJogador {
+    background-image: url(/assets/imgs/apache.png);
+    animation: play .2s steps(2) infinite;
+    /* play = propriedade css3
+    .5s = tempo de cada frame
+    steps() = quantos frames a animação possui
+    infinite = indicando que a animação será infinita */
+
+    /* prefixos para caso a animação não funcione em algum browser */
+    -webkit-animation: play .2s steps(2) infinite;
+    /* prefixo do google chrome*/
+    -moz-animation: play .2s steps(2) infinite;
+    /* prefixo do mozilla*/
+    -ms-animation: play .2s steps(2) infinite;
+    /* prefixo do internet explorer*/
+    -o-animation: play .2s steps(2) infinite;
+    /* prefixo do opera*/
+}
+
+/* Indicador de 4 chaves da animação dos helicópteros*/
+@keyframes play {
+
+    /* indica onde inicia e onde finaliza os quadros da animação */
+    from {
+        background-position: 0px;
+    }
+
+    to {
+        background-position: -512px;
+    }
+}
+
+@-webkit-keyframes play {
+    from {
+        background-position: 0px;
+    }
+
+    to {
+        background-position: -512px;
+    }
+}
+
+@-moz-keyframes play {
+    from {
+        background-position: 0px;
+    }
+
+    to {
+        background-position: -512px;
+    }
+}
+
+@-ms-keyframes play {
+    from {
+        background-position: 0px;
+    }
+
+    to {
+        background-position: -512px;
+    }
+}
+
+@-o-keyframes play {
+    from {
+        background-position: 0px;
+    }
+
+    to {
+        background-position: -512px;
+    }
+}
+
+/* Animação do helicóptero inimigo */
+.animaInimigo1 {
+    background-image: url(/assets/imgs/inimigo1.png);
+    animation: play .2s steps(2) infinite;
+}
+
+/* Animação do personagem amigo */
+.animaAmigo {
+    background-image: url(/assets/imgs/amigo.png);
+    animation: playAmigo .9s steps(12) infinite;
+}
+
+/* Indicador de 4 chaves da animação do personagem amigo */
+@keyframes playAmigo {
+
+    /* indica onde inicia e onde finaliza os quadros da animação */
+    from {
+        background-position: 528px;
+    }
+
+    to {
+        background-position: 0px;
+    }
+}
+
+.animaMorteAmigo {
+    width: 44px;
+    height: 51px;
+    background-image: url(../imgs/amigo_morte.png);
+    animation: playMorteAmigo .5s steps(7) infinite;
+}
+
+@keyframes playMorteAmigo {
+    from {
+        background-position: 0px;
+    }
+
+    to {
+        background-position: -308px;
+    }
+}
